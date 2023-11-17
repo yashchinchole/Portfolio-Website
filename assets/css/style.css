@@ -1,13 +1,4 @@
-/*
-#181818
-#212121
-#3d3d3d
-#ffffff
-#aaaaaa
-*/
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+/* Common CSS Starts */
 
 * {
   margin: 0;
@@ -22,43 +13,43 @@
 }
 
 html {
-  font-size: 75%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   background: #181818;
-  font-family: 'Comic Neue', cursive;
+}
+
+section {
+  min-height: 100vh;
+  padding: 2rem 5%;
 }
 
 *::selection {
-  background: #2b3dda;
+  background: blue;
   color: #fff;
 }
 
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
 html::-webkit-scrollbar {
-  width: 0.8rem;
+  width: 0.3rem;
 }
 
 html::-webkit-scrollbar-track {
-  background: rgb(235, 202, 245);
+  background: snow;
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #420177;
+  background: blue;
 }
 
-.loader-container.fade-out {
-  top: -120%;
-}
+/* Common CSS Ends */
 
-/* navbar starts */
+
+/* Header Starts */
+
+/* Navbar Starts */
+
 header {
   position: fixed;
   top: 0;
@@ -68,32 +59,19 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.7rem 10%;
-  height: 6.5rem;
+  padding: 1rem 10%;
+  height: 4rem;
   background-color: #212121;
   box-shadow: 0 1px 4px snow;
 }
 
-section {
-  min-height: 100vh;
-  padding: 2rem 9%;
-}
-
 header .logo {
-  /* font-size: 1.9rem; */
-  font-size: 3rem;
-  font-weight: 800;
-  text-decoration: none;
-  color: #fff;
-}
-
-header .logo i {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  color: white;
 }
 
 header .logo:hover {
-  color: orangered;
-  color: #39ace7;
+  color: skyblue;
 }
 
 header .navbar ul {
@@ -104,32 +82,32 @@ header .navbar ul {
 }
 
 header .navbar li {
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
 
 header .navbar ul li a {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #aaa;
-  font-weight: 600;
-  text-decoration: none;
   letter-spacing: 0.04rem;
   transition: 0.2s;
 }
 
 header .navbar ul li a.active,
 header .navbar ul li a:hover {
-  color: #39ace7;
-  border-bottom: 0.2rem solid whitesmoke;
-  padding: 0.5rem 0;
+  color: skyblue;
+  border-bottom: 0.05rem solid snow;
+  border-radius: .5rem;
+  padding: 0.3rem 0;
 }
 
-/* navbar ends */
+/* Navbar Ends */
 
-/* hamburger icon starts*/
+
+/* Hamburger Icon Starts*/
 #menu {
-  font-size: 3rem;
+  font-size: 1.5rem;
   cursor: pointer;
-  color: rgb(24, 2, 63);
+  color: skyblue;
   display: none;
 }
 
@@ -140,13 +118,13 @@ header .navbar ul li a:hover {
 
   header .navbar {
     position: fixed;
-    top: 6.5rem;
+    top: 5rem;
     right: -120%;
-    width: 75%;
+    width: 50%;
     height: 100%;
     text-align: left;
     align-items: flex-start;
-    background-color: #0e0f31;
+    background-color: #373737;
   }
 
   header .navbar ul {
@@ -159,23 +137,22 @@ header .navbar ul li a:hover {
     width: 100%;
     margin: 1rem 0;
     border-radius: 0.5rem;
-    width: 26rem;
+    width: 10rem;
   }
 
   header .navbar ul li a {
     display: block;
     padding: 1rem;
     text-align: left;
-    color: #fff;
-    font-size: 2rem;
+    color: #aaa;
+    font-size: 1.5rem;
   }
 
   header .navbar ul li a.active,
   header .navbar ul li a:hover {
     padding: 1rem;
-    color: #fff;
     border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #011aff;
+    border-bottom: 0.05rem solid snow;
   }
 
   .fa-times {
@@ -187,20 +164,25 @@ header .navbar ul li a:hover {
   }
 }
 
-/* hamburger icon ends */
+/* Hamburger Icon Ends*/
 
-/* hero section starts*/
+
+/* Header Ends */
+
+
+/* Home Section Starts*/
+
+/* Home Content Starts */
 .home {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
   min-height: 100vh;
   align-items: center;
 }
 
 .home #particles-js {
-  /* color: #fff; */
   position: absolute;
   top: 0;
   left: 0;
@@ -218,21 +200,21 @@ header .navbar ul li a:hover {
 }
 
 .home .content {
-  flex: 1 1 40rem;
-  padding-top: 1rem;
+  flex: 1 1 35rem;
+  padding-top: 8rem;
   z-index: 1;
 }
 
 .home .image {
-  flex: 1 1 40rem;
+  flex: 1 1 35rem;
   z-index: 1;
 }
 
 .home .image img {
   width: 80%;
-  margin-left: 5rem;
+  margin-left: 4rem;
   border-radius: 10%;
-  box-shadow: 0 2px 8px black;
+  box-shadow: 0 5px 5px black;
   cursor: pointer;
 }
 
@@ -241,29 +223,24 @@ header .navbar ul li a:hover {
 }
 
 .home .content h2 {
-  font-size: 5rem;
-  font-weight: 800;
-  /* color: skyblue; */
-  color: #ff7b00;
+  font-size: 3rem;
+  color: orange;
 }
 
 .home .content h2 span {
-  font-size: 5rem;
-  font-weight: 800;
-  color: whitesmoke;
+  font-size: 3rem;
+  color: snow;
 }
 
 .home .content p {
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2rem;
   padding: 1rem 0;
   color: #39ace7;
 }
 
 .home .content p span {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: greenyellow;
-  font-weight: 600;
   padding: 1rem 0;
 }
 
@@ -271,25 +248,22 @@ header .navbar ul li a:hover {
   margin-top: 1rem;
   position: absolute;
   line-height: 0;
-  padding: 1.6rem 3rem;
+  padding: 1rem 2rem;
   border-radius: 4em;
   transition: 0.5s;
   color: snow;
   background: #121212;
   box-shadow: 1px 3px 3px snow;
-  font-family: 'Comic Neue', cursive;
 }
 
 .home .btn span {
-  font-weight: 700;
-  font-size: 1.7rem;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
 }
 
 .home .btn i {
   margin-left: 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
@@ -301,10 +275,13 @@ header .navbar ul li a:hover {
   transform: translateX(5px);
 }
 
-/* social icons start */
+/* Home Content Ends */
+
+/* Home Social Icons Start */
+
 .socials {
   position: relative;
-  margin-top: 9rem;
+  margin-top: 7rem;
 }
 
 .socials .social-icons {
@@ -319,7 +296,7 @@ header .navbar ul li a:hover {
 }
 
 .social-icons a {
-  font-size: 3rem;
+  font-size: 2rem;
   display: inline-block;
   line-height: 50px;
   color: #121212;
@@ -349,9 +326,10 @@ header .navbar ul li a:hover {
   background-color: #007bb6;
 }
 
-/* social icons end */
+/* Home Social Icons Ends */
 
-/* hero media queries starts*/
+/* Home Media Queries Starts*/
+
 @media (max-width: 450px) {
   .home .btn {
     margin: 4rem 0;
@@ -374,18 +352,16 @@ header .navbar ul li a:hover {
   }
 }
 
-/* hero media queries ends*/
-/* hero section end */
+/* Home Media Queries Ends*/
 
-/* about section starts */
-.about {
-  background: linear-gradient(to bottom, #212121, #121212);
-}
+/* Home Section Ends */
+
+
+/* About Section Starts */
 
 .heading {
-  font-size: 3.5rem;
+  font-size: 1.9rem;
   color: yellowgreen;
-  font-weight: 800;
   text-align: center;
 }
 
@@ -397,27 +373,26 @@ header .navbar ul li a:hover {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  flex-wrap: wrap;
   padding: 4rem;
 }
 
 .about .row .image {
   text-align: center;
-  flex: 1 1 35rem;
+  flex: 1 1 20rem;
 }
 
 .about .row .image img {
   margin-top: 9rem;
-  width: 37rem;
+  width: 20rem;
   border-radius: 5%;
-  box-shadow: 0 5px 5px snow;
-  /* mix-blend-mode: luminosity; */
+  box-shadow: 0 5px 5px black;
   transition: 0.3s;
   cursor: pointer;
 }
 
 .about .row .image img:hover {
   mix-blend-mode: normal;
+  box-shadow: 0 5px 5px snow;
 }
 
 .about .row .content {
@@ -426,22 +401,20 @@ header .navbar ul li a:hover {
 }
 
 .about .row .content h3 {
-  color: whitesmoke;
-  font-size: 3.5rem;
+  color: snow;
+  font-size: 2rem;
 }
 
 .about .row .content .tag {
-  font-size: 2.4rem;
+  font-size: 1rem;
   color: wheat;
-  font-weight: 600;
   margin-top: 1rem;
 }
 
 .about .row .content p {
   color: #aaa;
-  font-size: 2rem;
+  font-size: 1.3rem;
   margin-top: 1.5rem;
-  font-weight: 600;
   text-transform: none;
 }
 
@@ -449,8 +422,6 @@ header .navbar ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  font-family: 'Comic Neue', cursive;
-  font-weight: 600;
 }
 
 .about .row .content .box-container .box p {
@@ -462,22 +433,22 @@ header .navbar ul li a:hover {
 }
 
 .resumebtn {
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 .resumebtn .btn {
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 0.5em;
   transition: 0.3s;
-  color: black;
-  background: skyblue;
-  box-shadow: 0px 5px 5px rgba(48, 68, 247, 0.6);
+  color: snow;
+  background: #121212;
+  box-shadow: 0px 3px 3px snow;
 }
 
 .resumebtn .btn span {
   font-weight: bold;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .resumebtn .btn i {
@@ -487,31 +458,40 @@ header .navbar ul li a:hover {
 }
 
 .resumebtn .btn:hover {
-  background: #421cecf5;
+  background: #373737;
 }
 
 .resumebtn .btn:hover i {
   transform: translateX(5px);
 }
 
-/* about media queries starts*/
+/* About Media Queries Starts*/
 @media screen and (max-width: 600px) {
+  .about .row {
+    display: block;
+  }
+
   .about .row .image {
     margin-top: 2rem;
   }
 
   .about .row .image img {
     margin: 0 auto;
-    width: 80%;
+    width: 70%;
     mix-blend-mode: normal;
+  }
+
+  .about .resumebtn {
+    margin-top: 5rem;
   }
 
   .about .row {
     padding: 0.5rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
 
   .about .row .content {
+    margin-top: 7rem;
     padding: 1rem;
   }
 
@@ -520,10 +500,13 @@ header .navbar ul li a:hover {
   }
 }
 
-/* about media queries ends*/
-/* about section ends */
+/* About Media Queries Ends*/
 
-/* skills section starts */
+/* About Section Ends */
+
+
+/* Skills Section Starts */
+
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #212121, #121212);
@@ -536,28 +519,28 @@ header .navbar ul li a:hover {
   padding: 2rem;
   width: 90%;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .skills .container .row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
 .skills .container .bar {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding: 10px;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px skyblue;
   background-color: #121212 !important;
   transition: 0.2s;
 }
 
 .skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background: #aaa !important;
+  box-shadow: 0 2px 10px snow !important;
+  background: #3d3d3d !important;
 }
 
 .skills .container .bar .info {
@@ -569,11 +552,11 @@ header .navbar ul li a:hover {
 }
 
 .skills .container .bar .info i {
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .skills .container .bar .info span {
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 500;
   margin-left: 0.5rem;
 }
@@ -598,10 +581,13 @@ header .navbar ul li a:hover {
   }
 }
 
-/* skills media queries ends*/
-/* skills section ends */
+/* Skills Media Queries Ends*/
 
-/* achievments section starts */
+/* Skills Section Starts */
+
+
+/* Achievments Section Starts */
+
 
 .achievments {
   background: linear-gradient(to bottom, #212121, #121212);
@@ -632,21 +618,20 @@ header .navbar ul li a:hover {
   width: 50%;
 }
 
-/*circles on timeline*/
+/* Circles on Timeline */
+
 .achievments .container::after {
   content: "\f0b1";
   position: absolute;
   width: 25px;
   height: 25px;
   right: -14px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid #ff9f55;
+  background-color: #3d3d3d;
+  border: 1px solid snow;
   top: 35px;
   border-radius: 50%;
   z-index: 100;
-  font-size: 1.89rem;
   text-align: center;
-  font-weight: 600;
   color: #373737;
   font-family: "Font Awesome\ 5 Free";
 }
@@ -671,67 +656,30 @@ header .navbar ul li a:hover {
 
 .achievments .content .tag {
   color: white;
-  font-size: 1.5rem;
-  padding-top: 1rem;
-  padding-left: 1.5rem;
+  font-size: 1rem;
+  padding-top: .5rem;
+  padding-left: 1rem;
 }
 
 .achievments .content .desc {
-  margin-left: 1.5rem;
-  padding-bottom: 1rem;
+  margin-left: 1rem;
+  padding-bottom: .5rem;
 }
 
 .achievments .content .desc h3 {
   color: wheat;
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1rem;
 }
 
 .achievments .content .desc p {
   color: #aaa;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding-right: 1rem;
 }
 
-/* view all button */
-.morebtn {
-  display: flex;
-  justify-content: center;
-}
+/* Achievments Media Queries Starts */
 
-.morebtn .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: #fff;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  text-align: center;
-}
-
-.morebtn .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-}
-
-.morebtn .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-
-.morebtn .btn:hover {
-  background: #1a047e;
-}
-
-.morebtn .btn:hover i {
-  transform: translateX(5px);
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .achievments {
     min-height: 80vh;
   }
@@ -772,35 +720,34 @@ header .navbar ul li a:hover {
   .achievments .right {
     left: 0%;
   }
-
-  .morebtn {
-    margin-top: 3rem;
-  }
 }
 
-/* achievments media queries ends */
-/* achievments section ends */
+/* Achievments Media Queries Ends */
 
-/* contact section starts */
+/* Achievments Section Ends */
+
+
+/* Contact Section Starts */
+
 .contact {
   background: linear-gradient(to bottom, #212121, #121212);
   min-height: 60vh;
 }
 
 .contact .container {
-  max-width: 1050px;
+  max-width: 1000px;
   width: 100%;
   background: #3d3d3d;
-  border-radius: 1.5rem;
-  margin: 2rem 5rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  margin: 1rem 10rem;
+  box-shadow: 0 3px 5px snow;
 }
 
 .contact .container .content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.5rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .contact .content .image-box {
@@ -810,7 +757,7 @@ header .navbar ul li a:hover {
 
 .contact .content .image-box img {
   width: 100%;
-  height: 40rem;
+  height: 20rem;
   position: relative;
 }
 
@@ -829,7 +776,7 @@ form .form-group {
   height: 50px;
   display: flex;
   position: relative;
-  margin: 1rem;
+  margin: .5rem;
   width: 100%;
 }
 
@@ -837,7 +784,7 @@ form i {
   position: absolute;
   top: 50%;
   left: 18px;
-  color: rgb(51, 51, 51);
+  color: #121212;
   font-size: 17px;
   pointer-events: none;
   transform: translateY(-50%);
@@ -852,7 +799,7 @@ form .message textarea {
   padding: 0 16px 0 48px;
   font-size: 16px;
   border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
+  border: 1px solid snow;
   background: #aaa;
 }
 
@@ -864,7 +811,7 @@ form .message textarea {
 .field input:focus,
 .message textarea:focus {
   padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
+  border: 2px solid #3d3d3d;
 }
 
 .field input:focus~i,
@@ -874,7 +821,7 @@ form .message textarea {
 
 form .message {
   position: relative;
-  margin: 1rem;
+  margin: .5rem;
   width: 100%;
 }
 
@@ -885,8 +832,8 @@ form .message i {
 }
 
 form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
+  min-height: 80px;
+  max-height: 200px;
   max-width: 100%;
   min-width: 100%;
   padding: 12px 20px 0 48px;
@@ -903,20 +850,21 @@ form .button-area {
 }
 
 .button-area button {
-  color: black;
+  color: snow;
   border: none;
   outline: none;
-  font-size: 1.8rem;
+  font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
   padding: 13px 25px;
-  background: #39ace7;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  background: #121212;
+  box-shadow: 0px 3px 5px snow;
   transition: 0.3s ease;
+  letter-spacing: 0.2rem;
 }
 
 .button-area button:hover {
-  background: #421cecf5;
+  background: #212121;
 }
 
 .button-area span {
@@ -929,7 +877,7 @@ form .button-area {
   position: relative;
   top: 6px;
   left: 2px;
-  font-size: 1.5rem;
+  font-size: .8rem;
   transition: 0.3s;
   color: #fff;
 }
@@ -938,7 +886,8 @@ form .button-area {
   left: 8px;
 }
 
-/* contact section media queries starts */
+/* Contact Section Media Queries Starts */
+
 @media (max-width: 900px) {
   .contact {
     min-height: 70vh;
@@ -962,10 +911,13 @@ form .button-area {
   }
 }
 
-/* contact section media queries ends */
-/* contact section ends */
+/* Contact Section Media Queries Ends */
 
-/* footer section starts */
+/* Contact Section Starts */
+
+
+/* Footer Section Starts */
+
 .footer {
   min-height: auto;
   padding-top: 0;
@@ -980,37 +932,36 @@ form .button-area {
 
 .footer .box-container .box {
   flex: 1 1 25rem;
-  margin: 2.5rem;
+  margin: 1rem;
 }
 
 .footer .box-container .box h3 {
-  font-size: 2.5rem;
-  color: #fff;
+  font-size: 1.3rem;
+  color: snow;
   padding-bottom: 1rem;
-  font-weight: normal;
 }
 
 .footer .box-container .box p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #ccc;
-  padding: 0.7rem 0;
+  padding: 0.2rem 0.3rem;
   text-transform: none;
 }
 
 .footer .box-container .box p i {
   padding-right: 1rem;
-  color: #ffae00;
+  color: #ccc;
 }
 
 .footer .box-container .box a {
-  font-size: 1.5rem;
-  color: rgb(238, 238, 238);
+  font-size: 1rem;
+  color: #ccc;
   padding: 0.3rem 0;
   display: block;
 }
 
 .footer .box-container .box a:hover {
-  color: #ffae00;
+  color: skyblue;
 }
 
 .footer .box-container .box .share {
@@ -1020,44 +971,42 @@ form .button-area {
 }
 
 .footer .box-container .box .share a {
-  height: 4rem;
-  width: 4rem;
-  padding: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: .5rem;
   text-align: center;
   border-radius: 5rem;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   margin-right: 1rem;
   transition: 0.2s;
-  background: rgb(230, 230, 230);
-  color: #02094b;
+  background: #eee;
+  color: #181818;
   border: none;
 }
 
 .footer .box-container .box .share a:hover {
   background: transparent;
   transform: scale(0.98);
-  border: 0.1rem solid rgb(180, 178, 178);
-  color: #ffae00;
+  border: 0.1rem solid snow;
+  color: snow;
 }
 
 .footer .credit {
-  padding: 1rem 0 0 0;
   text-align: center;
-  font-size: 1.5rem;
-  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  border-top: 0.1rem solid #fff3;
+  border-top: 0.1rem snow;
 }
 
 .footer .credit a {
-  color: #ffae00;
+  color: orangered;
 }
 
 .footer .fa {
-  color: #e90606;
+  color: red;
   margin: 0 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   animation: pound 0.35s infinite alternate;
 }
 
@@ -1087,9 +1036,11 @@ form .button-area {
   }
 }
 
-/* footer section ends */
+/* Footer Section Ends */
 
-/* common media queries starts*/
+
+/* Common Media Queries Starts*/
+
 @media (max-width: 450px) {
   html {
     font-size: 55%;
@@ -1104,17 +1055,19 @@ form .button-area {
   }
 }
 
-/* common media queries ends*/
+/* Common Media Queries Ends */
 
-/* scroll top starts */
+
+/* Scroll Top Starts */
+
 #scroll-top {
   position: fixed;
   top: -140%;
-  right: 2rem;
-  padding: 1rem 1.5rem;
-  font-size: 2rem;
-  background: #ffae00;
-  color: rgb(13, 0, 44);
+  right: 1rem;
+  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  background: #aaa;
+  color: #121212;
   border-radius: 50%;
   transition: 1s linear;
   z-index: 1000;
@@ -1124,4 +1077,4 @@ form .button-area {
   top: calc(100% - 12rem);
 }
 
-/* scroll top ends */
+/* Scroll Top Ends */
