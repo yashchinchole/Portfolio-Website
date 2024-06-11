@@ -21,9 +21,9 @@
     {
         "title": "Portfolio-Website",
         "about": "Responsive portfolio website showcasing projects and skills, built with HTML, CSS, and JavaScript for optimal performance and user experience.",
-        "img": "./assets/images/projects/rps.png",
+        "img": "./assets/images/projects/pf.png",
         "github": "https://github.com/yashchinchole/portfolio-website",
-        "website": "https://yashchinchole.netlify.app/"
+        "website": "https://yash-chinchole.vercel.app/"
     },
     {
         "title": "Download-GeeksforGeeks-Articles",
