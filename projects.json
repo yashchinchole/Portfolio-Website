@@ -40,6 +40,13 @@
         "website": "https://yashchinchole.github.io/Movie-Review/"
     },
     {
+        "title": "QR-Code-Generator",
+        "about": "Created Streamlit app allows users to generates a QR code for a given URL.",
+        "img": "./assets/images/projects/qr.png",
+        "github": "https://github.com/yashchinchole/QR-Code-Generator",
+        "website": "https://qr-code-generator-gibv.onrender.com/"
+    },
+    {
         "title": "2048",
         "about": "2048 is a sliding puzzle game where players merge tiles to reach the 2048 tile.",
         "img": "./assets/images/projects/2048.png",
