@@ -1,174 +1,151 @@
-$(document).ready(function () {
+const typed = new Typed(".typing", {
+  strings: [
+    "",
+    "Data",
+    "Data Scientist",
+    "Data Analyst",
+    "Software Engineer",
+    "Web Developer",
+    "Competitive Programmer",
+  ],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
 
-    $('#menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+const nav = document.querySelector(".nav"),
+  navList = nav.querySelectorAll("li"),
+  totalNavList = navList.length,
+  allSection = document.querySelectorAll(".section"),
+  totalSection = allSection.length;
 
-    $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
-        $('.navbar').removeClass('nav-toggle');
+for (let i = 0; i < totalNavList; i++) {
+  const a = navList[i].querySelector("a");
+  a.addEventListener("click", function () {
+    for (let k = 0; k < totalSection; k++) {
+      allSection[k].classList.remove("back-section");
+    }
+    for (let j = 0; j < totalNavList; j++) {
+      if (navList[j].querySelector("a").classList.contains("active")) {
+        allSection[j].classList.add("back-section");
+      }
+      navList[j].querySelector("a").classList.remove("active");
+    }
+    this.classList.add("active");
+    showSection(this);
+    if (window.innerWidth < 1200) {
+      asideSectionTogglerBtn();
+    }
+  });
+}
 
-        if (window.scrollY > 60) {
-            document.querySelector('#scroll-top').classList.add('active');
-        } else {
-            document.querySelector('#scroll-top').classList.remove('active');
+function showSection(element) {
+  for (let k = 0; k < totalSection; k++) {
+    allSection[k].classList.remove("active");
+  }
+  const target = element.getAttribute("href").split("#")[1];
+  document.querySelector("#" + target).classList.add("active");
+}
+
+function updateNav(element) {
+  for (let i = 0; i < totalNavList; i++) {
+    navList[i].querySelector("a").classList.remove("active");
+    const target = element.getAttribute("href").split("#")[1];
+    if (
+      target ===
+      navList[i].querySelector("a").getAttribute("href").split("#")[1]
+    ) {
+      navList[i].querySelector("a").classList.add("active");
+    }
+  }
+}
+
+const navTogglerBtn = document.querySelector(".nav-toggler"),
+  aside = document.querySelector(".aside");
+navTogglerBtn.addEventListener("click", () => {
+  asideSectionTogglerBtn();
+});
+
+function asideSectionTogglerBtn() {
+  aside.classList.toggle("open");
+  navTogglerBtn.classList.toggle("open");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("skills.json")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok " + response.statusText);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const skillsRow = document.getElementById("skills-row");
+      if (!skillsRow) {
+        console.error('Element with ID "skills-row" not found.');
+        return;
+      }
+      data.forEach((skill) => {
+        const skillItem = document.createElement("div");
+        skillItem.className = "skills-item padd-15";
+
+        const skillItemInner = document.createElement("div");
+        skillItemInner.className = "skills-item-inner";
+
+        const icon = document.createElement("div");
+        icon.className = "icon";
+
+        const img = document.createElement("img");
+        img.src = skill.icon;
+        img.alt = skill.name;
+
+        icon.appendChild(img);
+
+        const title = document.createElement("h4");
+        title.textContent = skill.name;
+
+        skillItemInner.appendChild(icon);
+        skillItemInner.appendChild(title);
+
+        skillItem.appendChild(skillItemInner);
+        skillsRow.appendChild(skillItem);
+      });
+    })
+    .catch((error) => console.error("Error loading skills:", error));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("projects.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const projectsContainer = document.getElementById("projects-container");
+      data.forEach((project) => {
+        const projectItem = document.createElement("div");
+        projectItem.classList.add("projects-item", "padd-15");
+
+        let websiteLink = "";
+        if (project.website) {
+          websiteLink = `<a href="${project.website}" target="_blank"><i class="fas fa-globe"></i></a>`;
         }
 
-        // scroll spy
-        $('section').each(function () {
-            let height = $(this).height();
-            let offset = $(this).offset().top - 200;
-            let top = $(window).scrollTop();
-            let id = $(this).attr('id');
+        projectItem.innerHTML = `
+          <div class="projects-item-inner">
+            <div class="projects-img">
+              <img src="${project.img}" alt="${project.title}">
+            </div>
+            <div class="projects-info">
+              <h3 class="projects-title">${project.title}</h3>
+              <p class="projects-about">${project.about}</p>
+            </div>
+            <div class="projects-links">
+              <a href="${project.github}" target="_blank"><i class="fab fa-github"></i></a>
+              ${websiteLink}
+            </div>
+          </div>
+        `;
 
-            if (top > offset && top < offset + height) {
-                $('.navbar ul li a').removeClass('active');
-                $('.navbar').find(`[href="#${id}"]`).addClass('active');
-            }
-        });
-    });
-
-    // smooth scrolling
-    $('a[href*="#"]').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top,
-        }, 500, 'linear')
-    });
-
+        projectsContainer.appendChild(projectItem);
+      });
+    })
+    .catch((error) => console.error("Error fetching projects:", error));
 });
-
-// <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["frontend developer", "backend developer", "problem solver", "competitive programmer", "teck geek"],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
-});
-// <!-- typed js effect ends -->
-
-async function fetchData(type = "skills") {
-    let response
-    type === "skills" ?
-        response = await fetch("skills.json")
-        :
-        response = await fetch("./projects/projects.json")
-    const data = await response.json();
-    return data;
-}
-
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
-
-// function showProjects(projects) {
-//     let projectsContainer = document.querySelector("#work .box-container");
-//     let projectHTML = "";
-//     projects.slice(0, 10).filter(project => project.category != "android").forEach(project => {
-//         projectHTML += `
-//         <div class="box tilt">
-//       <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
-//       <div class="content">
-//         <div class="tag">
-//         <h3>${project.name}</h3>
-//         </div>
-//         <div class="desc">
-//           <p>${project.desc}</p>
-//           <div class="btns">
-//             <a href="${project.links.view}" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-//             <a href="${project.links.code}" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-//           </div>
-//         </div>
-//       </div>
-//     </div>`
-//     });
-//     projectsContainer.innerHTML = projectHTML;
-
-//     // <!-- tilt js effect starts -->
-//     VanillaTilt.init(document.querySelectorAll(".tilt"), {
-//         max: 15,
-//     });
-//     // <!-- tilt js effect ends -->
-
-//     /* ===== SCROLL REVEAL ANIMATION ===== */
-//     const srtop = ScrollReveal({
-//         origin: 'top',
-//         distance: '80px',
-//         duration: 1000,
-//         reset: true
-//     });
-
-//     /* SCROLL PROJECTS */
-//     srtop.reveal('.work .box', { interval: 200 });
-
-// }
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-// fetchData("projects").then(data => {
-//     showProjects(data);
-// });
-
-// <!-- tilt js effect starts -->
-VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    max: 15,
-});
-// <!-- tilt js effect ends -->
-
-/* ===== SCROLL REVEAL ANIMATION ===== */
-const srtop = ScrollReveal({
-    origin: 'top',
-    distance: '80px',
-    duration: 1000,
-    reset: true
-});
-
-/* SCROLL HOME */
-srtop.reveal('.home .content h3', { delay: 200 });
-srtop.reveal('.home .content p', { delay: 200 });
-srtop.reveal('.home .content .btn', { delay: 200 });
-
-srtop.reveal('.home .image', { delay: 400 });
-srtop.reveal('.home .linkedin', { interval: 600 });
-srtop.reveal('.home .github', { interval: 800 });
-srtop.reveal('.home .twitter', { interval: 1000 });
-srtop.reveal('.home .telegram', { interval: 600 });
-srtop.reveal('.home .instagram', { interval: 600 });
-srtop.reveal('.home .dev', { interval: 600 });
-
-/* SCROLL ABOUT */
-srtop.reveal('.about .content h3', { delay: 200 });
-srtop.reveal('.about .content .tag', { delay: 200 });
-srtop.reveal('.about .content p', { delay: 200 });
-srtop.reveal('.about .content .box-container', { delay: 200 });
-srtop.reveal('.about .content .resumebtn', { delay: 200 });
-
-/* SCROLL SKILLS */
-srtop.reveal('.skills .container', { interval: 200 });
-srtop.reveal('.skills .container .bar', { delay: 400 });
-
-/* SCROLL PROJECTS */
-srtop.reveal('.work .box', { interval: 200 });
-
-/* SCROLL ACHIEVMENTS */
-srtop.reveal('.achievments .timeline', { delay: 400 });
-srtop.reveal('.achievments .timeline .container', { interval: 400 });
-
-/* SCROLL CONTACT */
-srtop.reveal('.contact .container', { delay: 400 });
-srtop.reveal('.contact .container .form-group', { delay: 400 });

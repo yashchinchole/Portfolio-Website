@@ -1,19 +1,55 @@
 [
     {
+        "name": "Python",
+        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+    },
+    {
+        "name": "Pandas",
+        "icon": "https://img.icons8.com/color/48/pandas.png"
+    },
+    {
+        "name": "NumPy",
+        "icon": "https://img.icons8.com/color/48/numpy.png"
+    },
+    {
+        "name": "OpenCV",
+        "icon": "https://img.icons8.com/color/48/opencv.png"
+    },
+    {
+        "name": "Streamlit",
+        "icon": "https://img.icons8.com/ios/50/streamlit.png"
+    },
+    {
+        "name": "PowerBI",
+        "icon": "https://img.icons8.com/color/48/power-bi.png"
+    },
+    {
+        "name": "SQL",
+        "icon": "https://img.icons8.com/external-soft-fill-juicy-fish/60/external-sql-coding-and-development-soft-fill-soft-fill-juicy-fish.png"
+    },
+    {
+        "name": "MySQL",
+        "icon": "https://img.icons8.com/color/48/mysql-logo.png"
+    },
+    {
         "name": "Java",
         "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
     },
     {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+        "name": "C",
+        "icon": "https://img.icons8.com/color/48/c-programming.png"
     },
     {
         "name": "C++",
         "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
     },
     {
-        "name": "C",
-        "icon": "https://img.icons8.com/color/48/c-programming.png"
+        "name": "R",
+        "icon": "https://img.icons8.com/color/48/r.png"
+    },
+    {
+        "name": "PHP",
+        "icon": "https://img.icons8.com/ios/50/php.png"
     },
     {
         "name": "HTML5",
@@ -44,36 +80,8 @@
         "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
     },
     {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/redux.png"
-    },
-    {
         "name": "jQuery",
         "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
-    },
-    {
-        "name": "Notebook",
-        "icon": "https://img.icons8.com/fluency/48/jupyter.png"
-    },
-    {
-        "name": "Pandas",
-        "icon": "https://img.icons8.com/color/48/pandas.png"
-    },
-    {
-        "name": "NumPy",
-        "icon": "https://img.icons8.com/color/48/numpy.png"
-    },
-    {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
     },
     {
         "name": "Git",
@@ -84,15 +92,7 @@
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
     },
     {
-        "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-        "name": "VS Code",
-        "icon": "https://img.icons8.com/color/48/visual-studio-code-2019.png"
+        "name": "Notebook",
+        "icon": "https://img.icons8.com/fluency/48/jupyter.png"
     }
 ]

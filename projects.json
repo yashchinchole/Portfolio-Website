@@ -1,0 +1,74 @@
+[
+    {
+        "title": "OMR-Sheet-Evaluation-System",
+        "about": "Developed cost-effective OMR System using OpenCV, automating grading through advanced image processing for accurate evaluations with clear feedback.",
+        "img": "./assets/images/projects/omr.png",
+        "github": "https://github.com/yashchinchole/OMR-Sheet-Evaluation-System",
+        "website": "https://omr-sheet-evaluation-system.onrender.com/"
+    },
+    {
+        "title": "T20-World-Cup-Data-Analytics",
+        "about": "Created a Power BI report to identify the top 11 players for a T20 cricket team by scraping data from ESPNCricinfo and evaluating performance metrics.",
+        "img": "./assets/images/projects/t20.jpg",
+        "github": "https://github.com/yashchinchole/T20-World-Cup-Cricket-Data-Analytics"
+    },
+    {
+        "title": "Diabetes-Prediction",
+        "about": "This project predicts diabetes using features like pregnancies, insulin, age, and BMI, sourced from Kaggle and employing a random forest classifier for accurate prediction.",
+        "img": "./assets/images/projects/diabetes.png",
+        "github": "https://github.com/yashchinchole/Diabetes-Prediction"
+    },
+    {
+        "title": "Portfolio-Website",
+        "about": "Responsive portfolio website showcasing projects and skills, built with HTML, CSS, and JavaScript for optimal performance and user experience.",
+        "img": "./assets/images/projects/rps.png",
+        "github": "https://github.com/yashchinchole/portfolio-website",
+        "website": "https://yashchinchole.netlify.app/"
+    },
+    {
+        "title": "Download-GeeksforGeeks-Articles",
+        "about": "Developed Streamlit app enables users to download GeeksForGeeks articles as PDFs using their article URLs.",
+        "img": "./assets/images/projects/gfg-article.png",
+        "github": "https://github.com/yashchinchole/Download-GeeksforGeeks-Articles",
+        "website": "https://download-geeksforgeeks-articles.onrender.com/"
+    },
+    {
+        "title": "Movie-Review",
+        "about": "Movie review website that allows users to search for movies and view their details, including ratings and overviews.",
+        "img": "./assets/images/projects/movie-review.png",
+        "github": "https://github.com/yashchinchole/movie-review",
+        "website": "https://yashchinchole.github.io/Movie-Review/"
+    },
+    {
+        "title": "2048",
+        "about": "2048 is a sliding puzzle game where players merge tiles to reach the 2048 tile.",
+        "img": "./assets/images/projects/2048.png",
+        "github": "https://github.com/yashchinchole/2048",
+        "website": "https://yashchinchole.github.io/2048/"
+    },
+    {
+        "title": "Simon-Game",
+        "about": "Classic Simon game implementation where players must remember and repeat sequences of colors.",
+        "img": "./assets/images/projects/simon.png",
+        "github": "https://github.com/yashchinchole/Simon-Game",
+        "website": "https://yashchinchole.github.io/Simon-Game/"
+    },
+    {
+        "title": "Stopwatch-Timer",
+        "about": "This C++ programming project creates a stopwatch/timer application with start, stop, and reset functionalities.",
+        "img": "./assets/images/projects/stopwatch.png",
+        "github": "https://github.com/yashchinchole/Stopwatch-Timer"
+    },
+    {
+        "title": "Rock-Paper-Scissors",
+        "about": "This C programming project implements a simple Rock-Paper-Scissors game where the user plays against the computer.",
+        "img": "./assets/images/projects/rps.png",
+        "github": "https://github.com/yashchinchole/Rock-Paper-Scissors"
+    },
+    {
+        "title": "Guessing-Game",
+        "about": "This C programming project involves creating a number guessing game where the player tries to guess a randomly generated number within a specified range.",
+        "img": "./assets/images/projects/number.png",
+        "github": "https://github.com/yashchinchole/Number-Guessing"
+    }
+]
