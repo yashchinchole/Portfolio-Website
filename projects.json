@@ -13,17 +13,17 @@
         "github": "https://github.com/yashchinchole/T20-World-Cup-Cricket-Data-Analytics"
     },
     {
-        "title": "Diabetes-Prediction",
-        "about": "This project predicts diabetes using features like pregnancies, insulin, age, and BMI, sourced from Kaggle and employing a random forest classifier for accurate prediction.",
-        "img": "./assets/images/projects/diabetes.png",
-        "github": "https://github.com/yashchinchole/Diabetes-Prediction"
-    },
-    {
         "title": "Portfolio-Website",
         "about": "Responsive portfolio website showcasing projects and skills, built with HTML, CSS, and JavaScript for optimal performance and user experience.",
         "img": "./assets/images/projects/pf.png",
         "github": "https://github.com/yashchinchole/portfolio-website",
         "website": "https://yash-chinchole.vercel.app/"
+    },
+    {
+        "title": "Diabetes-Prediction",
+        "about": "This project predicts diabetes using features like pregnancies, insulin, age, and BMI, sourced from Kaggle and employing a random forest classifier for accurate prediction.",
+        "img": "./assets/images/projects/diabetes.png",
+        "github": "https://github.com/yashchinchole/Diabetes-Prediction"
     },
     {
         "title": "Download-GeeksforGeeks-Articles",
