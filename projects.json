@@ -17,7 +17,7 @@
         "about": "Responsive portfolio website showcasing projects and skills, built with HTML, CSS, and JavaScript for optimal performance and user experience.",
         "img": "./assets/images/projects/pf.png",
         "github": "https://github.com/yashchinchole/portfolio-website",
-        "website": "https://yash-chinchole.vercel.app/"
+        "website": "https://yashchinchole.vercel.app/"
     },
     {
         "title": "Diabetes-Prediction",
