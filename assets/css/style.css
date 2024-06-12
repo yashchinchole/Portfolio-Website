@@ -16,7 +16,7 @@
   --color-number: #8dec95;
 }
 
-/* Global CSS Start */
+/* Global Section Start */
 * {
   margin: 0;
   padding: 0;
@@ -28,8 +28,7 @@
 body {
   line-height: 1.5;
   font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
-  font-family: 'Comic Neue', cursive;
+  font-family: "Comfortaa", sans-serif;
   background: var(--background);
 }
 
@@ -161,9 +160,9 @@ ul {
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
 
-/* Global CSS End */
+/* Global Section End */
 
-/* Aside Start */
+/* Aside Section Start */
 .aside {
   width: 270px;
   height: 100%;
@@ -283,9 +282,9 @@ ul {
   color: var(--color-keywords);
 }
 
-/* Aside End */
+/* Aside Section End */
 
-/* Home Start */
+/* Home Section Start */
 .home {
   min-height: 100vh;
   display: flex;
@@ -358,9 +357,9 @@ h3.my-profession {
   border-radius: 5px;
 }
 
-/* Home End */
+/* Home Section End */
 
-/* About Start */
+/* About Section Start */
 .about .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -395,7 +394,7 @@ h3.my-profession {
 }
 
 .about .about-text p {
-  font-size: 16px;
+  font-size: 18px;
   color: var(--foreground);
 }
 
@@ -414,12 +413,12 @@ h3.my-profession {
 
 .about .buttons .btn {
   margin-right: 15px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
-/* About End */
+/* About Section End */
 
-/* Skills Start */
+/* Skills Section Start */
 .skills .container {
   padding-bottom: 40px;
 }
@@ -427,7 +426,7 @@ h3.my-profession {
 .skills .skills-item {
   flex: 0 0 16.66%;
   max-width: 16.66%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .skills .skills-item .skills-item-inner {
@@ -460,9 +459,9 @@ h3.my-profession {
   text-transform: capitalize;
 }
 
-/* Skills End */
+/* Skills Section End */
 
-/* Projects Start */
+/* Projects Section Start */
 .projects-item {
   width: calc(33.33% - 20px);
   margin: 10px;
@@ -473,7 +472,7 @@ h3.my-profession {
 }
 
 .projects-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
 }
 
 .projects-item-inner {
@@ -497,7 +496,8 @@ h3.my-profession {
 }
 
 .projects-title {
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
   color: var(--color-class-name);
   padding: 10px 10px;
 }
@@ -526,7 +526,7 @@ h3.my-profession {
 
 /* Projects Section End */
 
-/* Achievements Section CSS Start */
+/* Achievements Section Start */
 .achievement-content {
   width: calc(100%);
   margin: 10px 0 10px 0;
@@ -574,7 +574,9 @@ h3.my-profession {
   text-decoration: underline;
 }
 
-/* Contact Start */
+/* Achievements Section End */
+
+/* Contact Section Start */
 .contact-title {
   color: var(--foreground);
   text-align: center;
@@ -630,9 +632,9 @@ h3.my-profession {
   padding: 0 50px;
 }
 
-/* Contact End */
+/* Contact Section End */
 
-/* Device Responsive Start */
+/* Device Responsive Section Start */
 @media (max-width: 1190px) {
   .aside {
     left: -270px;
@@ -744,4 +746,4 @@ h3.my-profession {
   }
 }
 
-/* Device Responsive End */
+/* Device Responsive Section End */
