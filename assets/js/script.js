@@ -1,18 +1,3 @@
-const typed = new Typed(".typing", {
-  strings: [
-    "",
-    "Data",
-    "Data Scientist",
-    "Data Analyst",
-    "Software Engineer",
-    "Web Developer",
-    "Competitive Programmer",
-  ],
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-});
-
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li"),
   totalNavList = navList.length,
