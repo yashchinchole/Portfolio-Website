@@ -419,7 +419,7 @@ h4.my-profession .position {
 }
 
 .skills .skills-item .skills-item-inner {
-  background-color: var(--input-background);
+  background-color: var(--foreground);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 5px 5px;
@@ -436,15 +436,15 @@ h4.my-profession .position {
 }
 
 .skills .skills-item .skills-item-inner .icon img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .skills .skills-item .skills-item-inner h4 {
   font-size: 18px;
   margin-top: 15px;
   margin-bottom: 5px;
-  color: var(--foreground);
+  color: var(--input-background);
   text-transform: capitalize;
 }
 
