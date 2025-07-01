@@ -1,6 +1,7 @@
 :root {
   /* VS CODE WINTER IS COMING DARK NO ITALIC THEME */
   --background: #282822;
+  --black: #181818;
   --foreground: #d6deeb;
   --input-background: #0b253a;
   --input-foreground: #ffffffcc;
@@ -29,7 +30,7 @@
 body {
   line-height: 1.5;
   font-size: 16px;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   background: var(--background);
 }
 
@@ -419,32 +420,41 @@ h4.my-profession .position {
 }
 
 .skills .skills-item .skills-item-inner {
-  background-color: var(--foreground);
+  background-color: var(--black);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 5px 5px;
+  padding: 8px;
   text-align: center;
   transition: all 0.3s ease;
+}
+
+.skills .skills-item .skills-item-inner img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1) grayscale(1) brightness(2);
+  margin-bottom: 4px;
+  background: none !important;
+  box-shadow: none !important;
 }
 
 .skills .skills-item .skills-item-inner .icon {
   border-radius: 50%;
   display: block;
-  margin: 15px auto;
+  margin: 12px auto;
   text-align: center;
   transition: all 0.3s ease;
 }
 
 .skills .skills-item .skills-item-inner .icon img {
-  width: 30px;
-  height: 30px;
+  width: 37px;
+  height: 37px;
+  filter: invert(1) grayscale(1) brightness(2);
 }
 
 .skills .skills-item .skills-item-inner h4 {
   font-size: 18px;
-  margin-top: 15px;
   margin-bottom: 5px;
-  color: var(--input-background);
+  color: var(--input-foreground);
   text-transform: capitalize;
 }
 
