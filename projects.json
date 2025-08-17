@@ -26,6 +26,12 @@
     "website": "https://omr-sheet-evaluation-system.onrender.com/"
   },
   {
+    "title": "Anime-Recommender-System",
+    "about": "RAG-powered anime recommender using LangChain pipelines, embeddings, and vector search, deployed with FastAPI backend and Streamlit interface.",
+    "img": "./assets/images/projects/anime-recommender-system.png",
+    "github": "https://github.com/yashchinchole/Anime-Recommender-System"
+  },
+  {
     "title": "AI-PDF-Chatbot-and-Agent",
     "about": "Chat with PDFs using RAG and tools; supports multi-document ingestion, chunking, embeddings, and agent tools via LangChain and Groq, deployed with Streamlit for seamless interactive exploration.",
     "img": "./assets/images/projects/ai-pdf-chatbot-and-agent.png",
