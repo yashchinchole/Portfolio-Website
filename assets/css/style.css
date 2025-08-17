@@ -1,6 +1,7 @@
 :root {
   /* VS CODE WINTER IS COMING DARK NO ITALIC THEME */
-  --background: #282822;
+  /* --background: #282822; */
+  --background: #1e1e1e;
   --black: #181818;
   --foreground: #d6deeb;
   --input-background: #0b253a;
@@ -145,7 +146,7 @@ ul {
   font-size: 20px;
   padding: 12px 35px;
   color: var(--input-foreground);
-  border-radius: 37px;
+  border-radius: 30px;
   display: inline-block;
   white-space: nowrap;
   border: .1px solid var(--border);
@@ -256,11 +257,11 @@ ul {
   display: block;
   border-bottom: 1px solid var(--border);
   color: var(--foreground);
-  padding: 5px 15px;
+  padding: 10px 15px;
 }
 
 .aside .nav li a.active {
-  color: var(--color-keywords);
+  color: var(--editorLineNumber-foreground);
 }
 
 .aside .nav li a i {
@@ -301,13 +302,13 @@ ul {
 }
 
 h3.hello {
-  font-size: 30px;
+  font-size: 24px;
   margin: 40px 0 10px;
   line-height: 1.4;
 }
 
 h3.hello span {
-  font-size: 37px;
+  font-size: 30px;
   color: var(--foreground);
 }
 
@@ -318,12 +319,12 @@ h4.my-profession {
 }
 
 h4.my-profession .position {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .typing {
-  color: var(--color-quotes);
-  font-size: 23px;
+  color: var(--color-number);
+  font-size: 24px;
 }
 
 .home .personal-info-container {
