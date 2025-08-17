@@ -497,7 +497,7 @@ h4.my-profession .position {
 
 .skills .skills-item .skills-item-inner h4 {
   font-size: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: var(--input-foreground);
   text-transform: capitalize;
 }
